@@ -392,8 +392,8 @@ std::vector<QueryMetadata> GenerateQueries(
            "duration", duration);
 #endif
   });
-  auto q_size = queries[0].query_to_send.size() - 100;
-  for(size_t i = 0;i<q_size - 100;i++){
+  auto q_size = queries[0].query_to_send.size() - 1;
+  for(size_t i = 0;i<q_size - 1;i++){
     queries[0].query_to_send.pop_back();
   }
   return queries;
